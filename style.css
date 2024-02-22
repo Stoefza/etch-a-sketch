@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sketch-block {
+    border: black solid 1px;
+    width: 10px;
+    height: 10px;
+}
+
+.sketch-container {
+    display: flex;
+    max-width: 500px;
+    height: auto;
+
+}
