@@ -1,17 +1,24 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .sketch-block {
-    border: black solid 1px;
-    width: 10px;
-    height: 10px;
+    border: black solid 0.5px;
+    flex: 1 1 auto;
+
+
 }
 
 .sketch-container {
     display: flex;
-    max-width: 500px;
-    height: auto;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* gap: 1px; */
+    width: 500px;
+    height: 500px;
+
+    
 
 }
