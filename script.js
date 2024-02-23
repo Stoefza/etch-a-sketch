@@ -1,6 +1,7 @@
 const sketchContainer = document.querySelector(".sketch-container");
 // console.log(sketchContainer);
-let noOfBlocks = 2;
+let noOfBlocks = 16;
+let squareSize = (500 / noOfBlocks)
 let colorSelectionInput = document.getElementById('favcolor')
 colorSelectionInput.addEventListener('input', function(){
     let colorSelection = colorSelectionInput.value;
@@ -11,13 +12,13 @@ colorSelectionInput.addEventListener('input', function(){
 function createSquares() {
 	let blockCounter = 0;
 	let totalBlocks = noOfBlocks * noOfBlocks;
-    let squareSize = (500 / noOfBlocks)
+
 
 	for (blockCounter; blockCounter < totalBlocks; blockCounter++) {
 		let sketchBlock = document.createElement("div");
 		sketchBlock.className = "sketch-block";
         sketchBlock.id = `sketch-block-${blockCounter}`;
-        // sketchBlock.style.cssText = `width: ${squareSize}px; height: ${squareSize}px`;
+        sketchBlock.style.cssText = `width:${squareSize}px;height:${squareSize}px`;
         // sketchBlock.setAttribute("style", )
 		sketchContainer.appendChild(sketchBlock);
 	}
@@ -37,7 +38,7 @@ function addOnHoverEffect(colorSelection) {
 
 function setColor (squareId, colorSelection =  '#000000') {
     let hoverSquare = document.getElementById(squareId)
-    hoverSquare.setAttribute("style", `background-color: ${colorSelection}`)
+    hoverSquare.setAttribute("style", `background-color: ${colorSelection};width:${squareSize}px;height:${squareSize}px`)
     
 }
 
