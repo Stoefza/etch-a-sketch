@@ -7,13 +7,21 @@
 		<title>Etch-a-sketch - TOP</title>
 	</head>
 	<body>
-		<div class="sketch-container"></div>
+        <div>Etch-a-sketch</div>
+		<div class="sketch-container">
+
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
+            <p class="slider-value"></p>
+        </div>
 		<div>
 			<label for="favcolor">Select your favorite color:</label>
 			<input type="color" id="favcolor" value="#000000" />
 		</div>
         <div>
             <button id="reset-grid-btn">Clear</button>
+            <input id="randomise-check" type="checkbox" name="Randomise">
         </div>
 		<script src="script.js"></script>
 	</body>
