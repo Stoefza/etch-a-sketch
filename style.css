@@ -1,14 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #212121;
+    color: antiquewhite;
 }
+
+.header {
+    background-color: #212121;
+    display: flex;
+    padding: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Special Elite";
+
+}
+
+.logo {
+    font-family: "Special Elite";
+    font-size: 28px;
+    margin-right: auto;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+
 
 .sketch-block {
     border: black solid 0.5px;
-    /* flex: 1 1 auto; */
-    /* height: 50%;
-    width: 50%; */
+    background-color: white;
+
+}
+
+.play-space {
+    display: flex;
+    justify-content: center;
 }
 
 .sketch-container {
@@ -16,16 +50,38 @@
     /* flex-direction: row; */
     flex-wrap: wrap;
     /* gap: 1px; */
-    width: 500px;
-    height: 500px;
-
-    
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    background-color: #212121;
 
 }
 .slidecontainer {
-    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    flex: 1 1 0;
+    
 }
 
 .slider {
-    width: 50%;
+    width: 100%;
+}
+
+.settings-container {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin: auto;
+    column-gap: 20px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+
 }

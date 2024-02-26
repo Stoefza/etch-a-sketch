@@ -43,7 +43,7 @@ colorSelectionInput.addEventListener("input", function () {
 function createSquares(numberOfBlocks =16) {
 	let blockCounter = 0;
 	let totalBlocks = numberOfBlocks * numberOfBlocks;
-    squareSize = 500 / numberOfBlocks;
+    squareSize = 700 / numberOfBlocks;
 
 	for (blockCounter; blockCounter < totalBlocks; blockCounter++) {
 		let sketchBlock = document.createElement("div");

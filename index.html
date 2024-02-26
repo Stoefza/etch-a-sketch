@@ -7,22 +7,36 @@
 		<title>Etch-a-sketch - TOP</title>
 	</head>
 	<body>
-        <div>Etch-a-sketch</div>
-		<div class="sketch-container">
-
-        </div>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="16" class="slider" id="myRange">
-            <p class="slider-value"></p>
-        </div>
-		<div>
-			<label for="favcolor">Select your favorite color:</label>
-			<input type="color" id="favcolor" value="#000000" />
+		<div class="header">
+			<div class="logo">Etch-a-sketch</div>
+			<nav>
+				<ul class="nav_menu">
+					<li><a href="https://github.com/Stoefza" target="_blank">My GitHub</a></li>
+				</ul>
+			</nav>
 		</div>
-        <div>
-            <button id="reset-grid-btn">Clear</button>
-            <input id="randomise-check" type="checkbox" name="Randomise">
-        </div>
+	<div class="play-space">
+		<div class="sketch-container">
+			<!-- sketch blocks are generated into this container -->
+		</div>
+	</div>
+		<div class="settings-container">
+			<div class="settings">
+				<input type="range" min="1" max="100" value="16" class="slider" id="myRange" />
+				<p class="slider-value"></p>
+			</div>
+			<div class="settings">
+				<label for="favcolor">Select your favorite color:</label>
+				<input type="color" id="favcolor" value="#000000" />
+			</div>
+			<div class="settings">
+				<button id="reset-grid-btn">Clear</button>
+				<div class="rondomise-container">
+				<label for="Randomise">Randomize color</label>
+				<input id="randomise-check" type="checkbox" name="Randomise" />
+			</div>
+			</div>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
