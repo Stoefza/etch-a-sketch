@@ -8,6 +8,8 @@ let colorSelection = ''
 let colorSelectionInput = document.getElementById("favcolor");
 let randomColor
 let randomizeColorCheckbox = document.getElementById('randomise-check')
+let blockAmountText = document.querySelector(".slider-value")
+blockAmountText.textContent = `${slider.value} x ${slider.value}` 
 
 
 //Adds even listener to reset button
@@ -21,8 +23,9 @@ document.getElementById("reset-grid-btn").addEventListener("click", function () 
 });
 
 // Add event listener to slider
-slider.addEventListener('mouseup', function(){
+slider.addEventListener('input', function(){
     numberOfBlocks = slider.value
+    blockAmountText.textContent = `${slider.value} x ${slider.value}` 
     removeSquares()
     createSquares(slider.value)
     addOnHoverEffect()
