@@ -31,12 +31,15 @@ slider.addEventListener('input', function(){
     addOnHoverEffect()
 })
 
+//Sets Selected color and include the color in the on hover affect
 colorSelectionInput.addEventListener("input", function () {
 	colorSelection = colorSelectionInput.value;
 	addOnHoverEffect(colorSelection);
 	// console.log(colorSelection);
 });
 
+// Creates squares based on the slider input amount it has a default value of 16
+// This also injects the size of the block based on the container size and makes them fit perfectly each time
 function createSquares(numberOfBlocks =16) {
 	let blockCounter = 0;
 	let totalBlocks = numberOfBlocks * numberOfBlocks;
@@ -53,6 +56,8 @@ function createSquares(numberOfBlocks =16) {
     
 }
 
+// This funtion adds hover affects to each square, it takes the current selected color as a paramater
+// to paas through to setcolor(), once a block is hovered over it will run the set color FN
 function addOnHoverEffect(colorSelection) {
 	squares = document.querySelectorAll(".sketch-block");
 	squares.forEach(square => {
@@ -63,6 +68,7 @@ function addOnHoverEffect(colorSelection) {
 	// console.log(squares);
 }
 
+// Set the color of a square based on the current selected color on the front end
 function setColor(squareId, colorSelection = "#000000") {
 	let hoverSquare = document.getElementById(squareId);
     if (randomizeColorCheckbox.checked){
@@ -73,12 +79,14 @@ function setColor(squareId, colorSelection = "#000000") {
     }
 }
 
+// This resets the board top white
 function resetColor() {
     squares.forEach(square => {
         setColor(square.id, '#ffffff')
     })
 }
 
+// This is used to remove the squares before generateing new ones (without this, the squares will just generate below the current block)
 function removeSquares () {
     squares = document.querySelectorAll(".sketch-block");
     squares.forEach(square => {
@@ -86,6 +94,7 @@ function removeSquares () {
     })
 }
 
+// this funtion generates a random hex color value
 function generateRandomColor () {
     randomHexGenerator = Math.floor(Math.random()*16777215).toString(16);
     console.log(randomHexGenerator)
